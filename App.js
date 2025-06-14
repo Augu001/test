@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
+export const compute = (a, operator, b) => {
+  switch (operator) {
+    case '+':
+      return a + b;
+    case '-':
+      return a - b;
+    case '×':
+      return a * b;
+    case '÷':
+      return b === 0 ? 0 : a / b;
+    default:
+      return b;
+  }
+};
+
 export default function App() {
   const [display, setDisplay] = useState('0');
   const [first, setFirst] = useState(null);
   const [op, setOp] = useState(null);
 
-  const compute = (a, operator, b) => {
-    switch (operator) {
-      case '+':
-        return a + b;
-      case '-':
-        return a - b;
-      case '×':
-        return a * b;
-      case '÷':
-        return b === 0 ? 0 : a / b;
-      default:
-        return b;
-    }
-  };
 
   const handlePress = (val) => {
     if (val === 'C') {

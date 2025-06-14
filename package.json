@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "react-native start",
-    "test": "echo \"No tests specified\" && exit 0"
+    "test": "jest"
   },
   "dependencies": {
     "react": "18.2.0",
